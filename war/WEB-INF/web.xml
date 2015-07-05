@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>ApiServlet</servlet-name>
+		<servlet-class>crawingspackage.ApiServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CrawlingServlet</servlet-name>
+		<servlet-class>crawingspackage.CravingsServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>CrawlingTaskServlet</servlet-name>
+		<servlet-class>crawingspackage.CrawlingTaskServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>GetImageServlet</servlet-name>
+		<servlet-class>crawingspackage.GetImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ApiServlet</servlet-name>
+		<url-pattern>/getRecipes</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CrawlingTaskServlet</servlet-name>
+		<url-pattern>/crawlRecipe</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>CrawlingServlet</servlet-name>
+		<url-pattern>/startCrawl</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetImageServlet</servlet-name>
+		<url-pattern>/getImg</url-pattern>
+	</servlet-mapping>
+	<welcome-file-list>
+		<welcome-file>slider.html</welcome-file>
+	</welcome-file-list>
+</web-app>

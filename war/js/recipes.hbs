@@ -1,0 +1,13 @@
+<ul>
+  {{#each pr in model}}
+    <li>
+      <div class="issue-number">#{{pr.number}}</div>
+      <div class="issue-title">
+        <a {{bind-attr href=pr.html_url}}>{{pr.title}}</a>
+      </div>
+      <div class="author-name">
+        Opened by <a {{bind-attr href=pr.head.user.html_url}}><strong>@{{pr.head.user.login}}</strong></a>
+      </div>
+    </li>
+  {{/each}}
+</ul>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Cravings</title>
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/slider.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+	</head>
+	<body>
+		<h1>Cravings</h1>
+
+		<div id="cravings-choice" class="container">
+		<h3>What are you craving?</h3>
+		
+		<h4><span class="quantity-indicator" id="meat-result-visible"></span> Meat</h4>
+		<div id="meat" class="ingredient-slider"></div>
+		<input type="hidden" id="meat-result-invisible"/>
+		
+		<h4><span class="quantity-indicator" id="bread-result-visible"></span> Bread</h4>
+		<div id="bread" class="ingredient-slider"></div>
+		<input type="hidden" id="bread-result-invisible"/>
+
+		<h4><span class="quantity-indicator" id="salt-result-visible"></span> Salt</h4>
+		<div id="salt" class="ingredient-slider"></div>
+		<input type="hidden" id="salt-result-invisible"/>
+
+		<h4><span class="quantity-indicator" id="spice-result-visible"></span> Spices</h4>
+		<div id="spice" class="ingredient-slider"></div>
+		<input type="hidden" id="spice-result-invisible"/>
+
+		<h4><span class="quantity-indicator" id="sugar-result-visible"></span> Sugar</h4>
+		<div id="sugar" class="ingredient-slider"></div>
+		<input type="hidden" id="sugar-result-invisible"/>
+		
+		<label>
+		<input type="checkbox" id="picture-choice" name="needsPictures" value="isOn"> I want to see some pictures<br>
+		</label>
+		
+		<!--Once cravings chosen, push the button to return some recipes-->
+		<!-- <input type ="button" id="submit" value="Munch"/>-->
+
+		<!--Relevant recipes go here-->
+		<script type="text/x-handlebars" data-template-name="index">
+		<div class="container" id="recipes">
+<div class="recipe-tile-list">
+<ul>
+  <h3 class="recipe-list-title">Recipes</h3>
+  {{#each pr in model}}
+    <li class="recipe-tile">
+	  <a {{bind-attr href=pr.recipeUrl}}>
+        <div class="recipe-title-holder">
+          <h3 class="recipe-title">{{pr.title}}</h3><br />
+        </div>
+	    <div class="slider-holder">
+	      <ul>
+	        {{#each img in pr.recipeImageList}}
+              <li class="recipe-picture" style="background-image:url('{{unbound img}}');">
+              </li>
+	        {{/each}}
+	      </ul>
+	    </div>
+	  </a>
+    </li>
+  {{/each}}
+</ul>
+</div>
+		</div>
+		</script>
+
+		<script type="text/javascript" src="js/libs/jquery.js"></script>
+		<script type="text/javascript" src="js/libs/jquery-ui.js"></script>
+		<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/libs/handlebars-v1.3.0.js"></script>
+		<script type="text/javascript" src="js/libs/ember-1.8.1.js"></script>
+		<script type="text/javascript" src="js/libs/ember-data.js"></script>
+		<script type="text/javascript" src="js/libs/imageslider.js"></script>				
+		<script type="text/javascript" src="js/slider.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		</div>
+	</body>
+</html>
+
+<!--Add a button and text box-->

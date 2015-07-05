@@ -1,0 +1,14 @@
+<queue-entries>
+  <queue>
+    <name>default</name>
+    <rate>6/m</rate>
+    <bucket-size>50</bucket-size>
+    <max-concurrent-requests>1</max-concurrent-requests>
+  </queue>
+  <queue>
+    <name>crawling</name>
+    <rate>6/m</rate>
+    <bucket-size>50</bucket-size>
+    <max-concurrent-requests>1</max-concurrent-requests>
+  </queue>
+</queue-entries>

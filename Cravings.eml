@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component inheritJdk="true">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$">
+		<excludeFolder url="file://$MODULE_DIR$/.clover"/>
+	</contentEntry>
+	<levels>
+		<level name="appengine-api-1.0-sdk-1.9.15" value="project"/>
+	</levels>
+</component>
